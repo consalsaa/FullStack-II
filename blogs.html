@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - Tienda</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+        
+        .content h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sticky-header">
+            <nav class="navbar">
+                <div class="logo" onclick="redirectToHome()">
+                    <span class="logo-text">🛍️ MiTienda</span>
+                </div>
+            </nav>
+
+            <div class="subnav">
+                <div class="subnav-links">
+                    <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
+                    <a href="nosotros.html" onclick="redirectToAbout(); return false;">Nosotros</a>
+                    <a href="blogs.html" onclick="redirectToBlog(); return false;">Blogs</a>
+                    <a href="contacto.html" onclick="redirectToContact(); return false;">Contacto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="blogs-container">
+            <h1>Blogs</h1>
+            <div class="blog-lista">
+                <div class="blog-item">
+                    <h2>Blog #1: Novedades de la tienda</h2>
+                    <p>Descubre las últimas novedades, lanzamientos y promociones especiales de nuestra tienda.</p>
+                    <a href="#">Leer más</a>
+                </div>
+                <div class="blog-item">
+                    <h2>Blog #2: Consejos para comprar online</h2>
+                    <p>Te damos los mejores consejos y tips para que tu experiencia de compra sea segura y satisfactoria.</p>
+                    <a href="#">Leer más</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p style="text-align: center; padding: 1rem 0; background: #f7c873; color: #222; margin-top: 3rem;">
+                &copy; 2025 Tienda. Todos los derechos reservados.
+            </p>
+        </footer>
+    </div>
+    <script src="stuff.js"></script>
+</body>
+</html>
