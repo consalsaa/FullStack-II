@@ -5,37 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - Tienda</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+        
+        .content h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-    <header>TIENDA</header>
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-    <div class="productos-container">
-        <h1>Productos</h1>
-        <div class="productos-lista">
-            <div class="producto">
-                <img src="https://via.placeholder.com/100" alt="Producto 1">
-                <h2>Producto 1</h2>
-                <p>Descripción breve del producto 1.</p>
-                <a href="detalleproducto.html">Ver Detalle</a>
-            </div>
-            <div class="producto">
-                <img src="https://via.placeholder.com/100" alt="Producto 2">
-                <h2>Producto 2</h2>
-                <p>Descripción breve del producto 2.</p>
-                <a href="detalleproducto.html">Ver Detalle</a>
-            </div>
-            <div class="producto">
-                <img src="https://via.placeholder.com/100" alt="Producto 3">
-                <h2>Producto 3</h2>
-                <p>Descripción breve del producto 3.</p>
-                <a href="detalleproducto.html">Ver Detalle</a>
+    <div class="wrapper">
+        <div class="sticky-header">
+            <nav class="navbar">
+                <div class="logo" onclick="redirectToHome()">
+                    <span class="logo-text">🛍️ MiTienda</span>
+                </div>
+            </nav>
+
+            <div class="subnav">
+                <div class="subnav-links">
+                    <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
+                    <a href="nosotros.html" onclick="redirectToAbout(); return false;">Nosotros</a>
+                    <a href="blogs.html" onclick="redirectToBlog(); return false;">Blogs</a>
+                    <a href="contacto.html" onclick="redirectToContact(); return false;">Contacto</a>
+                </div>
             </div>
         </div>
+
+        <div class="productos-container">
+            <h1>Productos</h1>
+            <div class="productos-lista">
+                <div class="producto">
+                    <img src="https://via.placeholder.com/100" alt="Producto 1">
+                    <h2>Producto 1</h2>
+                    <p>Descripción breve del producto 1.</p>
+                    <a href="detalleproducto.html">Ver Detalle</a>
+                </div>
+                <div class="producto">
+                    <img src="https://via.placeholder.com/100" alt="Producto 2">
+                    <h2>Producto 2</h2>
+                    <p>Descripción breve del producto 2.</p>
+                    <a href="detalleproducto.html">Ver Detalle</a>
+                </div>
+                <div class="producto">
+                    <img src="https://via.placeholder.com/100" alt="Producto 3">
+                    <h2>Producto 3</h2>
+                    <p>Descripción breve del producto 3.</p>
+                    <a href="detalleproducto.html">Ver Detalle</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p style="text-align: center; padding: 1rem 0; background: #f7c873; color: #222; margin-top: 3rem;">
+                &copy; 2025 Tienda. Todos los derechos reservados.
+            </p>
+        </footer>
     </div>
+    <script src="stuff.js"></script>
 </body>
 </html>
