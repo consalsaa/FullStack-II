@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - Tienda</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Iniciar Sesión - MonkiBox</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <div class="login-container">
@@ -19,8 +19,9 @@
             <button type="submit">Entrar</button>
         </form>
         <div class="links">
-            <a href="registro.html">¿No tienes cuenta? Regístrate</a><br>
-            <a href="index.html">Volver a la página principal</a>
+            <a href="registro.html" onclick="redirectToRegister(); return false;">¿No tienes cuenta? Regístrate</a>
+            <a href="admin.html" onclick="redirectToHome(); return false;">¿Eres administrador?</a>
+            <a href="index.html" onclick="redirectToHome(); return false;">Volver a la página principal</a>
         </div>
     </div>
 </body>

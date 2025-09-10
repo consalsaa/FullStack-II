@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog #1 - MonkiBox</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+        
+        .content h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .nav-btn {
+            background: #f7c873;
+            color: #222;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            border: 1.5px solid #e6b14c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            margin-left: 0.5rem;
+        }
+        .nav-btn:hover {
+            background: #e6b14c;
+            color: #fff;
+        }
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+            margin: 20px;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        .product-image {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+        }
+        
+        .product-image img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        
+        .product-content {
+            padding: 30px;
+        }
+        
+        .product-title {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #34495e;
+            line-height: 1.8;
+            font-size: 16px;
+            text-align: justify;
+        }
+        
+        .product-description p {
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .features {
+            margin: 20px 0;
+        }
+        
+        .features ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .features li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .features li:before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .product-card {
+                margin: 10px;
+            }
+            
+            .product-image {
+                height: 250px;
+            }
+            
+            .product-content {
+                padding: 20px;
+            }
+            
+            .product-title {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-image {
+                height: 200px;
+            }
+            
+            .product-title {
+                font-size: 22px;
+            }
+            
+            .product-description {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sticky-header">
+                       <nav class="navbar">
+                <div class="logo" onclick="redirectToHome()">
+                    <span class="logo-text">🛍️ MonkiBox 🛍️</span>
+                </div>
+                <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
+                    <a href="carrito.html" class="nav-btn">🛒</a>
+                </div>
+            </nav>
+            <div class="subnav">
+                <div class="subnav-links">
+                    <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
+                    <a href="nosotros.html" onclick="redirectToAbout(); return false;">Nosotros</a>
+                    <a href="blogs.html" onclick="redirectToBlog(); return false;">Blogs</a>
+                    <a href="contacto.html" onclick="redirectToContact(); return false;">Contacto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/500x300/6a11cb/ffffff?text=Producto+Premium" alt="Imagen del producto">
+            </div>
+            <div class="product-content">
+                <h1 class="product-title">Novedades de la tienda</h1>
+                
+                <div class="product-description">
+                    <p>Descubre el nuevo Smartphone Ultra Pro Max, diseñado para aquellos que buscan lo último en tecnología y rendimiento. Con su elegante diseño y potentes características, este dispositivo transformará por completo tu experiencia móvil.</p>
+                    
+                    <div class="highlight">
+                        <p>Experimenta una velocidad sin precedentes con el procesador de última generación y disfruta de una autonomía que te acompañará durante todo el día.</p>
+                    </div>
+                    
+                    <p>La cámara de 108 MP captura cada detalle con una claridad impresionante, incluso en condiciones de poca luz. Graba videos en 8K y revive tus momentos especiales con una calidad cinematográfica.</p>
+                    
+                    <div class="features">
+                        <h3>Características principales:</h3>
+                        <ul>
+                            <li>Pantalla Super AMOLED de 6.7 pulgadas con tasa de refresco de 120Hz</li>
+                            <li>Batería de 5000 mAh con carga rápida de 65W</li>
+                            <li>Almacenamiento de 256 GB ampliable hasta 1 TB</li>
+                            <li>Resistencia al agua IP68</li>
+                            <li>Reconocimiento facial y lector de huellas bajo la pantalla</li>
+                            <li>Conectividad 5G para descargas ultrarrápidas</li>
+                        </ul>
+                    </div>
+                    
+                    <p>Diseñado con materiales premium y un acabado impeccable, no solo es un dispositivo de alto rendimiento sino también una declaración de estilo. Disponible en tres colores exclusivos: Negro Midnight, Azul Cielo y Plata Titanio.</p>
+                    
+                    <p>El sistema operativo está optimizado para ofrecer una experiencia fluida y personalizable, con actualizaciones de seguridad garantizadas por 4 años. Además, incluye funciones exclusivas de productividad y entretenimiento que aprovechan al máximo el hardware de vanguardia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p style="text-align: center; padding: 1rem 0; background: #f7c873; color: #222; margin-top: 3rem;">
+            &copy; 2025 Tienda. Todos los derechos reservados.
+        </p>
+    </footer>
+    <script src="JS/stuff.js"></script>
+</body>
+</html>

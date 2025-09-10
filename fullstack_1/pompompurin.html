@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BllindBox Pompompurin - MonkiBox</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+        
+        .content h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .related-item {
+            cursor: pointer;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .nav-btn {
+            background: #f7c873;
+            color: #222;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            border: 1.5px solid #e6b14c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            margin-left: 0.5rem;
+        }
+        .nav-btn:hover {
+            background: #e6b14c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sticky-header">
+            <nav class="navbar">
+                <div class="logo" onclick="redirectToHome()">
+                    <span class="logo-text">🛍️ MonkiBox 🛍️</span>
+                </div>
+                <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
+                    <a href="carrito.html" class="nav-btn">🛒</a>
+                </div>
+            </nav>
+            <div class="subnav">
+                <div class="subnav-links">
+                    <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
+                    <a href="nosotros.html" onclick="redirectToAbout(); return false;">Nosotros</a>
+                    <a href="blogs.html" onclick="redirectToBlog(); return false;">Blogs</a>
+                    <a href="contacto.html" onclick="redirectToContact(); return false;">Contacto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Producto principal -->
+            <div class="product-main">
+                <div class="product-image">
+                    <img src="https://preview.redd.it/help-with-gift-for-a-purin-fan-v0-o4cqeshgpw4e1.jpg?width=768&format=pjpg&auto=webp&s=6b2b433ad0e9aa7cfbea15e1c15c05614663e074" alt="Pompompurin">
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title">BllindBox Pompompurin</h1>
+                    <div class="product-price">$9.990</div>
+                    <p class="product-description">
+                        El Smartphone XYZ Ultra cuenta con una pantalla Super AMOLED de 6.7 pulgadas, 
+                        cámara cuádruple de 108 MP, batería de 5000 mAh y procesador de última generación. 
+                        Diseñado para quienes exigen lo mejor en tecnología móvil.
+                    </p>
+                    <button class="buy-button">
+                        <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+
+            <!-- Productos relacionados -->
+            <div class="related-products">
+                <h2 class="related-title">Productos relacionados</h2>
+                <div class="related-grid">
+                    <!-- Producto 1 -->
+                    <div class="related-item" onclick="redirectToProduct1()">
+                        <div class="related-image">
+                            <img src="https://cdnx.jumpseller.com/sonny-angel-chile/image/38600398/thumb/719/719?1737784488" alt="Smiski">
+                        </div>
+                        <div class="related-info">
+                            <div class="related-name">BlindBox Smiski</div>
+                            <div class="related-price">$7.990</div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="related-item" onclick="redirectToProduct3()">
+                        <div class="related-image">
+                            <img src="https://i5.walmartimages.cl/asr/d503f09b-08a1-41d8-899c-6ce19e4a26f7.b08b5cce4de29f8ffe25e5b7cf9abe0f.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Monkey King">
+                        </div>
+                        <div class="related-info">
+                            <div class="related-name">BlindBox Monkey King</div>
+                            <div class="related-price">$10.000</div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="related-item" onclick="redirectToProduct4()">
+                        <div class="related-image">
+                            <img src="https://shopmrpen.com/cdn/shop/files/ScreenShot2023-12-13at11.13.09AM.png?v=1702484188" alt="Cinnamoroll">
+                        </div>
+                        <div class="related-info">
+                            <div class="related-name">BllindBox Cinnamoroll</div>
+                            <div class="related-price">$14.990</div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="related-item" onclick="redirectToProduct5()">
+                        <div class="related-image">
+                            <img src="https://adept-image-resizer-latest.s3-us-west-2.amazonaws.com/https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0543%2F4293%2Ffiles%2FBox_c4f8d775-1ed6-4298-ad5f-5cdbe029e02a.jpg_medium.webp" alt="Sanrio">
+                        </div>
+                        <div class="related-info">
+                            <div class="related-name">BlindBox Sanrio</div>
+                            <div class="related-price">$13.990</div>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="related-item" onclick="redirectToProduct6()">
+                        <div class="related-image">
+                            <img src="https://www.bigw.com.au/medias/sys_master/images/images/h27/h06/63477741715486.jpg" alt="Snoopy">
+                        </div>
+                        <div class="related-info">
+                            <div class="related-name">BlindBox Snoopy</div>
+                            <div class="related-price">$16.990</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p style="text-align: center; padding: 1rem 0; background: #f7c873; color: #222; margin-top: 3rem;">
+                &copy; 2025 Tienda. Todos los derechos reservados.
+            </p>
+        </footer>
+    </div>
+    <script src="JS/stuff.js"></script>
+</body>
+</html>

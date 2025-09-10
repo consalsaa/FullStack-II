@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs - Tienda</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,17 +30,40 @@
             line-height: 1.6;
             margin-bottom: 1rem;
         }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .nav-btn {
+            background: #f7c873;
+            color: #222;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            border: 1.5px solid #e6b14c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            margin-left: 0.5rem;
+        }
+        .nav-btn:hover {
+            background: #e6b14c;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="sticky-header">
-            <nav class="navbar">
+                       <nav class="navbar">
                 <div class="logo" onclick="redirectToHome()">
                     <span class="logo-text">🛍️ MonkiBox 🛍️</span>
                 </div>
+                <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
+                    <a href="carrito.html" class="nav-btn">🛒</a>
+                </div>
             </nav>
-
             <div class="subnav">
                 <div class="subnav-links">
                     <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
@@ -52,17 +75,17 @@
         </div>
 
         <div class="blogs-container">
-            <h1>Noticias importantes</h1>
+            <h1>Blogs</h1>
             <div class="blog-lista">
                 <div class="blog-item">
                     <h2>Blog #1: Novedades de la tienda</h2>
                     <p>Descubre las últimas novedades, lanzamientos y promociones especiales de nuestra tienda.</p>
-                    <a href="#">Leer más</a>
+                    <a href="blog1.html" onclick="redirectToBlog1(); return false;">Leer Más</a>
                 </div>
                 <div class="blog-item">
                     <h2>Blog #2: Consejos para comprar online</h2>
                     <p>Te damos los mejores consejos y tips para que tu experiencia de compra sea segura y satisfactoria.</p>
-                    <a href="#">Leer más</a>
+                    <a href="blog2.html" onclick="redirectToBlog2(); return false;">Leer Más</a>
                 </div>
             </div>
         </div>
@@ -73,6 +96,6 @@
             </p>
         </footer>
     </div>
-    <script src="stuff.js"></script>
+    <script src="JS/stuff.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Tienda</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contacto - MonkiBox</title>
+    <link rel="stylesheet" href="CSS/style.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,17 +30,40 @@
             line-height: 1.6;
             margin-bottom: 1rem;
         }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .nav-btn {
+            background: #f7c873;
+            color: #222;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            border: 1.5px solid #e6b14c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            margin-left: 0.5rem;
+        }
+        .nav-btn:hover {
+            background: #e6b14c;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="sticky-header">
-            <nav class="navbar">
+                       <nav class="navbar">
                 <div class="logo" onclick="redirectToHome()">
                     <span class="logo-text">🛍️ MonkiBox 🛍️</span>
                 </div>
+                <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
+                    <a href="carrito.html" class="nav-btn">🛒</a>
+                </div>
             </nav>
-
             <div class="subnav">
                 <div class="subnav-links">
                     <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
@@ -50,27 +73,29 @@
                 </div>
             </div>
         </div>
-    <div class="login-container">
-        <h2>Formulario de Contacto</h2>
-        <form>
-            <label for="nombre">Nombre Completo</label>
-            <input type="text" id="nombre" name="nombre" required>
 
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" required>
+        <div class="login-container">
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-            <label for="comentario">Comentario</label>
-            <textarea id="comentario" name="comentario" rows="4" placeholder=""></textarea>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
 
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </div>
+                <label for="comentario">Comentario</label>
+                <textarea id="comentario" name="comentario" rows="4" placeholder=""></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
         <footer>
             <p style="text-align: center; padding: 1rem 0; background: #f7c873; color: #222; margin-top: 3rem;">
                 &copy; 2025 MonkiBox. Todos los derechos reservados.
             </p>
         </footer>
     </div>
-    <script src="stuff.js"></script>
+    <script src="JS/stuff.js"></script>
 </body>
 </html>

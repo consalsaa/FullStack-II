@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal - Tienda</title>
-    <link rel="stylesheet" href="style.css">
+    <title>MonkiBox</title>
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <style>
         body {
@@ -33,41 +33,38 @@
         }
 
         .navbar {
-    display: flex;
-    align-items: center;
-}
-.nav-btn {
-    background: #f7c873;
-    color: #222;
-    padding: 0.5rem 1.2rem;
-    border-radius: 5px;
-    border: 1.5px solid #e6b14c;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background 0.2s, color 0.2s;
-    margin-left: 0.5rem;
-}
-.nav-btn:hover {
-    background: #e6b14c;
-    color: #fff;
-}
+            display: flex;
+            align-items: center;
+        }
+        .nav-btn {
+            background: #f7c873;
+            color: #222;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            border: 1.5px solid #e6b14c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            margin-left: 0.5rem;
+        }
+        .nav-btn:hover {
+            background: #e6b14c;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="sticky-header">
-                       <nav class="navbar">
+            <nav class="navbar">
                 <div class="logo" onclick="redirectToHome()">
                     <span class="logo-text">🛍️ MonkiBox 🛍️</span>
                 </div>
                 <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
-                    <a href="registro.html" class="nav-btn">Registrarse</a>
-                    <a href="login.html" class="nav-btn">Iniciar Sesión</a>
                     <a href="carrito.html" class="nav-btn">🛒</a>
                 </div>
             </nav>
-
             <div class="subnav">
                 <div class="subnav-links">
                     <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
@@ -83,10 +80,11 @@
             <p>¡Explora nuestras figuras y sorpresas en cada caja, lee nuestro blog o contáctanos para más información.<br>
             Si ya tienes una cuenta, inicia sesión. Si eres nuevo, regístrate para comenzar a comprar.</p>
             <div class="actions">
-                <a href="login.html">Iniciar Sesión</a>
-                <a href="registro.html">Registrarse</a>
+                <a href="login.html" onclick="redirectToLogin(); return false;">Iniciar sesión</a>
+                <a href="registro.html" onclick="redirectToRegister(); return false;">Registrate</a>
             </div>
         </div>
+
         <div id="customCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="width:100vw;max-width:100vw;margin:2rem 0;">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -121,16 +119,16 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
         </div>
 
         <footer>
@@ -139,7 +137,7 @@
             </p>
         </footer>
     </div>
-    <script src="stuff.js"></script>
+    <script src="JS/stuff.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
