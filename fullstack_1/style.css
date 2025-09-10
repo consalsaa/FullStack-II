@@ -1,3 +1,69 @@
+/* Estilos para formulario de contacto */
+.contact-form-container {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    width: 500px;
+    margin: 3rem auto;
+    border: 1.5px solid #222;
+}
+.contact-form-header {
+    background: #ededed;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1.5px solid #222;
+    letter-spacing: 1px;
+    color: #222;
+}
+.contact-form {
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.contact-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    color: #555;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 0.5rem;
+}
+.contact-form textarea {
+    min-height: 90px;
+    max-height: 200px;
+}
+.contact-form button {
+    width: 60%;
+    margin: 1.5rem auto 0 auto;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    color: #222;
+    box-shadow: 2px 2px 0 #222;
+}
+.contact-form button:hover {
+    background: #f7c873;
+}
 /*Estilos para los nav*/
 * {
     margin: 0;
@@ -112,7 +178,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Viewport height */
+    min-height: 100vh;
 }
 
 .sticky-header {
@@ -238,8 +304,12 @@ footer {
 }
 .productos-lista {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
 }
 .producto {
     background: #f6f6f6;
@@ -257,6 +327,11 @@ footer {
     height: 100px;
     object-fit: contain;
     margin-bottom: 1rem;
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1);
+}
+.producto:hover img {
+    transform: scale(1.25);
+    z-index: 2;
 }
 .producto h2 {
     font-size: 1.1rem;

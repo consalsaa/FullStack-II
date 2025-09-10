@@ -37,7 +37,7 @@
         <div class="sticky-header">
             <nav class="navbar">
                 <div class="logo" onclick="redirectToHome()">
-                    <span class="logo-text">🛍️ MiTienda</span>
+                    <span class="logo-text">🛍️ MonkiBox 🛍️</span>
                 </div>
             </nav>
 
@@ -50,10 +50,24 @@
                 </div>
             </div>
         </div>
+    <div class="login-container">
+        <h2>Formulario de Contacto</h2>
+        <form>
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required>
 
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comentario">Comentario</label>
+            <textarea id="comentario" name="comentario" rows="4" placeholder=""></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
         <footer>
             <p style="text-align: center; padding: 1rem 0; background: #f7c873; color: #222; margin-top: 3rem;">
-                &copy; 2025 Tienda. Todos los derechos reservados.
+                &copy; 2025 MonkiBox. Todos los derechos reservados.
             </p>
         </footer>
     </div>
