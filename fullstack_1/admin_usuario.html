@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - MonkiBox</title>
+    <title>Gestion de Usuarios - MonkiBox</title>
     <link rel="stylesheet" href="CSS/style.css">
     <style>
         body {
@@ -66,43 +66,66 @@
             </nav>
             <div class="subnav">
                 <div class="subnav-links">
-                    <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
-                    <a href="nosotros.html" onclick="redirectToAbout(); return false;">Nosotros</a>
-                    <a href="blogs.html" onclick="redirectToBlog(); return false;">Blogs</a>
-                    <a href="contacto.html" onclick="redirectToContact(); return false;">Contacto</a>
+                    <a href="admin.html" onclick="redirectToAdmin(); return false;">Inicio</a>
+                    <a href="admin_usuario.html" onclick="redirectToAdmin1(); return false;">Gestion de Usuarios</a>
+                    <a href="admin_producto.html" onclick="redirectToAdmin2(); return false;">Gestion de Productos</a>
                 </div>
             </div>
         </div>
 
-        <div class="contact-container">
-            <div class="contact-form">
-                <h2>Envíanos un mensaje</h2>
-                <form id="contactForm">
+        <main class="admin-main">
+            <div class="admin-actions">
+                <h2>Gestión de Usuarios</h2>
+                <button id="createUserBtn" class="btn-primary">Crear Nuevo Usuario</button>
+            </div>
+
+            <div class="users-table-container">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo Electrónico</th>
+                            <th>Rol</th>
+                            <th>Fecha de Registro</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- Los usuarios se cargarán aquí mediante JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <!-- Modal para crear/editar usuario -->
+        <div id="userModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Crear Nuevo Usuario</h2>
+                <form id="userForm">
+                    <input type="hidden" id="userId">
                     <div class="form-group">
-                        <label for="fullname">Nombre completo</label>
-                        <input type="text" id="fullname" name="fullname" placeholder="Tu nombre completo" required>
-                        <div class="error-message">Por favor ingresa tu nombre completo</div>
+                        <label for="userName">Nombre completo</label>
+                        <input type="text" id="userName" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="email">Correo electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required>
-                        <div class="error-message">Por favor ingresa un correo electrónico válido</div>
+                        <label for="userEmail">Correo electrónico</label>
+                        <input type="email" id="userEmail" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                        <div class="error-message">Por favor escribe tu mensaje</div>
+                        <label for="userPassword">Contraseña</label>
+                        <input type="password" id="userPassword">
                     </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane"></i> Enviar mensaje
-                    </button>
-                    
-                    <div class="success-message" id="successMessage">
-                        ¡Mensaje enviado correctamente! Te contactaremos pronto.
+                    <div class="form-group">
+                        <label for="userRole">Rol</label>
+                        <select id="userRole" required>
+                            <option value="admin">Administrador</option>
+                            <option value="admin">Vendedor</option>
+                            <option value="user">Usuario</option>
+                        </select>
                     </div>
+                    <button type="submit" class="btn-primary">Guardar</button>
                 </form>
             </div>
         </div>

@@ -12,6 +12,12 @@
             padding: 0;
             background-color: #f8f9fa;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
         
         .content {
             max-width: 1200px;
@@ -61,7 +67,7 @@
                     <span class="logo-text">🛍️ MonkiBox 🛍️</span>
                 </div>
                 <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
-                    <a href="carrito.html" class="nav-btn">🛒</a>
+                    <a href="carrito.html" class="nav-btn" id="cartLink">🛒(<span id="cartCount">0</span>)</a>
                 </div>
             </nav>
             <div class="subnav">
@@ -72,6 +78,75 @@
                     <a href="contacto.html" onclick="redirectToContact(); return false;">Contacto</a>
                 </div>
             </div>
+        </div>
+
+        <div class="container">
+            <!-- Historia de la empresa -->
+            <section class="section">
+                <h2 class="section-title">Nuestra Historia</h2>
+                <div class="history-content">
+                    <div class="history-text">
+                        <p>Nuestra Tienda nació en 2015 con una visión simple: crear una experiencia de compra en línea excepcional para nuestros clientes. Lo que comenzó como un pequeño emprendimiento entre amigos, hoy se ha convertido en una de las tiendas online más confiables de la región.</p>
+                        <p>A lo largo de los años, hemos crecido y evolucionado, pero nuestros valores fundamentales siguen intactos: calidad, confianza y servicio al cliente excepcional.</p>
+                        <p>Hoy contamos con un catálogo de más de 10,000 productos y servimos a clientes en toda Latinoamérica, siempre manteniendo el espíritu innovador que nos caracteriza desde el primer día.</p>
+                    </div>
+                    <div class="history-image">
+                        <img src="https://www.planmyjapan.com/wp-content/uploads/2024/07/blind-box-new-1.jpg" alt="Nuestro equipo trabajando">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Misión y Visión -->
+            <section class="section">
+                <h2 class="section-title">Misión y Visión</h2>
+                <div class="mission-vision">
+                    <div class="mission">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Misión</h3>
+                        <p>Proporcionar productos de alta calidad a precios accesibles, brindando una experiencia de compra excepcional y un servicio al cliente que supere las expectativas.</p>
+                    </div>
+                    <div class="vision">
+                        <i class="fas fa-eye"></i>
+                        <h3>Visión</h3>
+                        <p>Ser la tienda online preferida de Latinoamérica, reconocida por nuestra innovación, confiabilidad y compromiso con la satisfacción total del cliente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Valores -->
+            <section class="section">
+                <h2 class="section-title">Nuestros Valores</h2>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="value-title">Confianza</h3>
+                        <p>Construimos relaciones duraderas basadas en la honestidad y transparencia con nuestros clientes.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Innovación</h3>
+                        <p>Buscamos constantemente nuevas formas de mejorar y optimizar la experiencia de compra.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="value-title">Trabajo en Equipo</h3>
+                        <p>Creemos que colaborando juntos podemos alcanzar metas mucho más grandes.</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Pasión</h3>
+                        <p>Amamos lo que hacemos y nos esforzamos por superarnos cada día.</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <footer>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - MonkiBox</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+        
+        .content h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        .nav-btn {
+            background: #f7c873;
+            color: #222;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+            border: 1.5px solid #e6b14c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            margin-left: 0.5rem;
+        }
+        .nav-btn:hover {
+            background: #e6b14c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sticky-header">
+                       <nav class="navbar">
+                <div class="logo" onclick="redirectToHome()">
+                    <span class="logo-text">🛍️ MonkiBox 🛍️</span>
+                </div>
+                <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
+                    <a href="carrito.html" class="nav-btn" id="cartLink">🛒(<span id="cartCount">0</span>)</a>
+                </div>
+            </nav>
+            <div class="subnav">
+                <div class="subnav-links">
+                    <a href="productos.html" onclick="redirectToProducts(); return false;">Productos</a>
+                    <a href="nosotros.html" onclick="redirectToAbout(); return false;">Nosotros</a>
+                    <a href="blogs.html" onclick="redirectToBlog(); return false;">Blogs</a>
+                    <a href="contacto.html" onclick="redirectToContact(); return false;">Contacto</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="cart-main">
+            <div class="cart-container">
+                <div class="cart-items">
+                    <h2>Tus Productos</h2>
+                    <div id="cartItemsList">
+                        <!-- Los productos del carrito se cargarán aquí -->
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h2>Resumen de Compra</h2>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Envío:</span>
+                            <span id="shipping">$0.00</span>
+                        </div>
+                        <div class="summary-row discount-row">
+                            <span>Descuento:</span>
+                            <span id="discount">-$0.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        
+                        <div class="coupon-section">
+                            <label for="couponCode">¿Tienes un cupón?</label>
+                            <div class="coupon-input">
+                                <input type="text" id="couponCode" placeholder="Ingresa tu código">
+                                <button id="applyCoupon">Aplicar</button>
+                            </div>
+                        </div>
+                        
+                        <button id="checkoutBtn" class="checkout-btn">Proceder al Pago</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p style="text-align: center; padding: 1rem 0; background: #f7c873; color: #222; margin-top: 3rem;">
+                &copy; 2025 MonkiBox. Todos los derechos reservados.
+            </p>
+        </footer>
+    </div>
+    <script src="JS/stuff.js"></script>
+</body>
+</html>

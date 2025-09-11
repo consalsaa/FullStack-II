@@ -65,7 +65,7 @@
                     <span class="logo-text">🛍️ MonkiBox 🛍️</span>
                 </div>
                 <div style="margin-left:auto; display:flex; gap:0.7rem; align-items:center;">
-                    <a href="carrito.html" class="nav-btn">🛒</a>
+                    <a href="carrito.html" class="nav-btn" id="cartLink">🛒(<span id="cartCount">0</span>)</a>
                 </div>
             </nav>
             <div class="subnav">
@@ -88,11 +88,26 @@
                     <h1 class="product-title">BllindBox Pompompurin</h1>
                     <div class="product-price">$9.990</div>
                     <p class="product-description">
-                        El Smartphone XYZ Ultra cuenta con una pantalla Super AMOLED de 6.7 pulgadas, 
-                        cámara cuádruple de 108 MP, batería de 5000 mAh y procesador de última generación. 
-                        Diseñado para quienes exigen lo mejor en tecnología móvil.
+                        Mini figuras 9 cm. coleccionables.
+                        <br>
+                        <br>
+                        MUY LINDOS!
+                        <br>
+                        <br>
+                        Importante: Cada caja incluye una figura al azar, es decir, elegirás la serie pero el Pompompurin que te toque será sorpresa
+                        <br>
+                        <br>
+                        Detalles:
+                        <br>
+                        ◆ Tamaño del producto: Aprox. 7 a 9 cms
+                        <br>
+                        ◆ Tamaño del paquete: 9.5 x 9.5 cms
+                        <br>
+                        ◆ Peso: Aprox. 40 g (con empaque)
+                        <br>
+                        ◆ Material: ABS, PVC, Textura Flocked
                     </p>
-                    <button class="buy-button">
+                    <button class="buy-button" onclick="addToCartDetail()">
                         <i class="fas fa-shopping-cart"></i> Agregar al carrito
                     </button>
                 </div>
@@ -167,5 +182,19 @@
         </footer>
     </div>
     <script src="JS/stuff.js"></script>
+        <script>
+        // Función específica para la página de detalle
+        function addToCartDetail() {
+            const quantity = 1;
+            
+            // Estos valores deberían venir de tu base de datos o ser insertados dinámicamente
+            const productId = 2; // Obtener del backend o atributo data
+            const productName = "BlindBox Pompompurin"; // Obtener del backend
+            const productPrice = 9.990; // Obtener del backend
+            const productImage = "https://preview.redd.it/help-with-gift-for-a-purin-fan-v0-o4cqeshgpw4e1.jpg?width=768&format=pjpg&auto=webp&s=6b2b433ad0e9aa7cfbea15e1c15c05614663e074"; // Obtener del backend
+            
+            addToCart(productId, productName, productPrice, productImage, quantity);
+        }
+    </script>
 </body>
 </html>
